@@ -1,0 +1,113 @@
+// $small: 300px;
+$medium: 1400px;
+
+* {
+    font-family: 'Lato', sans-serif;
+
+}
+
+.inicioContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inicioContenido {
+        margin: 0 15vw;
+        
+        div {
+            h1 {
+                padding-top: 4.5vw;
+                .inicioTitle {
+                    display: block;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 4.20rem;
+                    line-height: 5rem;
+                    // text-shadow: #ffffff -3px 2px 1px, #000000 -4px 3px 0px;
+                    position: relative;
+
+                    &::before {
+                        content: 'Fullstack Developer';
+                        position: absolute;
+                        color: white;
+                        left: -3px;
+                        top: 4px;
+                        z-index: -10;
+                        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                    }
+                }
+
+                .colorTitle {
+                    color: #0ACF83;
+                }
+
+                .inicioText {
+                    display: block;
+                }
+                
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1.875rem;                
+                margin-bottom: 1rem;
+                
+            }
+
+            .socialInicio {
+                svg {
+                    margin-right: .5rem;
+                }
+
+                .linkedinInicio {
+                    cursor: pointer;
+                    transition: all .3s;
+                    &:hover {
+                        color: #0a66c2;
+                    }
+                }
+
+                .githubInicio {
+                    cursor: pointer;
+                    transition: all .3s;
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+
+        }
+
+        .imageInicio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 25rem;
+                height: 25rem;
+                padding: 0;
+            }
+
+        }
+    }
+
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(4px);
+    
+    .nav-link {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.55rem;
+        line-height: 2.375rem;
+        margin-right: 1rem;
+        color: #000000;
+    }
+}
+
+
