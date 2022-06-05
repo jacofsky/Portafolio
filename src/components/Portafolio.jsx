@@ -11,32 +11,35 @@ const proyectos = [
     {
         img: ipTracker,
         titulo: 'Ip Tracker',
-        tags: [ {name: 'react', color: '#FFFFFF'} , {name: 'redux', color: '#FFFFFF'}],
+        tags: [ {name: 'react', color: '#00D8FF'} , {name: 'redux', color: '#764ABC'}]
     },
     {
         img: unSplash,
         titulo: 'Unsplash App',
-        tags: [{name: 'node', color: '#FFFFFF'}, {name: 'react', color: '#FFFFFF'}],
+        tags: [{name: 'node', color: '#539E43'}, {name: 'react', color: '#00D8FF'}],
     },
     {
         img: tipCalculator,
         titulo: 'Tip calculator',
-        tags: [{name: 'react', color: '#FFFFFF'}, {name: 'redux', color: '#FFFFFF'}],
+        tags: [{name: 'react', color: '#00D8FF'}, {name: 'redux', color: '#764ABC'}],
     },
     {
         img: todoApp,
         titulo: 'Todo app',
-        tags: [{name: 'typescript', color: '#FFFFFF'}, {name: 'css', color: '#FFFFFF'}],
+        tags: [{name: 'typescript', color: '#007ACC'}, {name: 'css', color: '#33A9DC'}],
     },
 ]
 
 const Portafolio = () => {
   return (
-    <div>
-        <div>
-            <h2>Portafolio</h2>
+    <div className='portafolioBg'>
+        <div className='portafolioContainer'>
+            <div className="portafolioTittle">
+                <h2>Portafolio</h2>
+
+            </div>
             
-            <div>
+            <div className='row'>
                 {proyectos.map(proyecto => <ProyectoCard  source={proyecto.img} titulo={proyecto.titulo} tags={proyecto.tags} />)}
             </div>
 

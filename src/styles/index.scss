@@ -15,17 +15,17 @@ $medium: 1400px;
 
     .inicioContenido {
         margin: 0 15vw;
-        
+
         div {
             h1 {
                 padding-top: 4.5vw;
+
                 .inicioTitle {
                     display: block;
                     font-style: normal;
                     font-weight: 700;
                     font-size: 4.20rem;
                     line-height: 5rem;
-                    // text-shadow: #ffffff -3px 2px 1px, #000000 -4px 3px 0px;
                     position: relative;
 
                     &::before {
@@ -46,14 +46,14 @@ $medium: 1400px;
                 .inicioText {
                     display: block;
                 }
-                
+
                 font-family: 'Lato';
                 font-style: normal;
                 font-weight: 700;
                 font-size: 1.5rem;
-                line-height: 1.875rem;                
+                line-height: 1.875rem;
                 margin-bottom: 1rem;
-                
+
             }
 
             .socialInicio {
@@ -64,6 +64,7 @@ $medium: 1400px;
                 .linkedinInicio {
                     cursor: pointer;
                     transition: all .3s;
+
                     &:hover {
                         color: #0a66c2;
                     }
@@ -72,6 +73,7 @@ $medium: 1400px;
                 .githubInicio {
                     cursor: pointer;
                     transition: all .3s;
+
                     &:hover {
                         color: #333;
                     }
@@ -84,6 +86,7 @@ $medium: 1400px;
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 width: 25rem;
                 height: 25rem;
@@ -98,7 +101,7 @@ $medium: 1400px;
 .navbar {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(4px);
-    
+
     .nav-link {
         font-family: 'Lato';
         font-style: normal;
@@ -110,4 +113,251 @@ $medium: 1400px;
     }
 }
 
+.waveTopSkills {
+    width: 100vw;
+    height: 13vh;
+    position: absolute;
+    z-index: -100;
+}
 
+.waveBottomSkills {
+    width: 100vw;
+    height: 13vh;
+    position: relative;
+    bottom: -5px;
+}
+
+.skillsContainer {
+
+    margin: 0 15vw;
+
+    .skillTittle {
+
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            display: inline-block;
+            color: white;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 5rem;
+            position: relative;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+
+
+            &::before {
+                content: 'Skills';
+                position: absolute;
+                color: #0acf83;
+                left: -3px;
+                top: 4px;
+                z-index: -10;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+        }
+    }
+
+    .icons {
+
+
+        img {
+            transform: scale(.7);
+            transition: all .5s;
+            padding: 0 3vw;
+
+            &:hover {
+                transform: scale(.8);
+            }
+        }
+
+        .figma {
+            transform: scale(.45);
+            transition: all .5s;
+
+            &:hover {
+                transform: scale(.55);
+            }
+        }
+    }
+}
+
+.portafolioBg {
+    background-color: #0ACF83;
+    position: relative;
+    z-index: 10;
+    
+    .portafolioContainer {
+        margin: 0 15vw;
+
+
+        .portafolioTittle {
+            display: flex;
+            justify-content: center;
+            h2 {
+                display: inline-block;
+                color: white;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 4rem;
+                line-height: 5rem;
+                position: relative;
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+    
+    
+                &::before {
+                    content: 'Portafolio';
+                    position: absolute;
+                    color: #0acf83;
+                    left: -3px;
+                    top: 4px;
+                    z-index: -1;
+                    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                }
+            }
+
+        }
+
+        .portafolioCard {
+            
+            display: flex;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 17.875rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 10;
+            .proyectoContainer {
+                opacity: 0;
+                padding: 0;
+                position: absolute;
+                z-index: 10;
+                bottom: 7px;
+                width: 100%;
+                padding: 0 4.8vw;
+                transition: all .5s;
+                .infoProyecto {
+
+                    border-radius: 0 0 3.125rem 3.125rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: rgba(0, 0, 0, 0.184);
+                    padding: .5rem 1rem;
+
+                    h3 {
+                        font-weight: 700;
+                        opacity: 1;
+                        transition: all .5s;
+                        color: white;
+
+                    }
+
+                    .tags {
+                        display: flex;
+                        opacity: 1;
+                        transition: all .5s;
+                        padding: 0 1rem;
+
+                        div {
+                            border-radius: .5rem;
+                            margin: 0 .3rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            padding: 0 .3rem;
+                            font-weight: 700;
+                            color: white;
+                        }
+
+                    }
+
+                    .linksPortafolio {
+                        a {
+                            background-color: #0ACF83;
+                            padding: 0 .5rem;
+                            margin: 0 .3rem;
+                            font-weight: 700;
+                            border-radius: .5rem;
+                            color: white;
+                            text-decoration: none;
+                            transition: all .5s;
+                            &:hover {
+                                background-color: #08a569;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &:hover {                    
+                    .proyectoContainer {
+                        opacity: 1; 
+                        
+
+                        padding: 0;
+                        position: absolute;
+                        bottom: 7px;
+                        width: 100%;
+                        padding: 0 4.8vw;
+
+                        .infoProyecto {
+                            opacity: 1;
+                            border-radius: 0 0 3.125rem 3.125rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: rgba(0, 0, 0, 0.184);
+                            padding: .5rem 1rem;
+
+                            h3 {
+                                font-weight: 700;
+                                opacity: 1;
+                                transition: all .5s;
+
+
+                            }
+
+                            .tags {
+                                display: flex;
+                                opacity: 1;
+                                transition: all .5s;
+                                padding: 0 1rem;
+
+                                div {
+                                    border-radius: .5rem;
+                                    margin: 0 .3rem;
+                                }
+
+                                p {
+                                    margin: 0;
+                                    padding: 0 .3rem;
+                                    font-weight: 700;
+                                    color: white;
+                                }
+
+                            }
+
+                            .linksPortafolio {
+                                a {
+                                    padding: 0 .5rem;
+                                }
+                            }
+
+                        }
+                    }
+
+                
+            }
+
+        }
+
+    }
+}
