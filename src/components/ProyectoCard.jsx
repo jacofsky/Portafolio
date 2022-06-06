@@ -1,30 +1,14 @@
 import React from 'react'
 
-const ProyectoCard = ({source, titulo, tags}) => {
+const ProyectoCard = ({source, titulo, tags, link}) => {
 
     console.log(source);
   return (
-    <div className='col-md-6 col-12 portafolioCard' style={{backgroundImage: `url(${source})`}}>
+    <div className='col-lg-6 col-12 portafolioCard'>
 
-      <div className='proyectoContainer'>
-        <div className='infoProyecto'>
-          <h3>{titulo}</h3>
-          
-          <div className='tags'>
-            {tags.map(tag => <div style={{backgroundColor: `${tag.color}`}}><p>{tag.name}</p></div>)}
-          </div>
-
-          <div className='linksPortafolio'>
-            <a href="">Sitio</a>
-            <a href="">Codigo</a>
-          </div>
-
-
-        </div>
-
-      </div>
-      
-      
+      <a href={link} target="_blank">
+        <img src={source} alt={titulo} />
+      </a>
     </div>
   )
 }

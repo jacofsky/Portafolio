@@ -18,9 +18,9 @@ import waveBottomSkills from '../assets/waves/waveBottomSkills.png'
 
 const Skills = () => {
     return (
-        <div>
+        <div id='skills'>
 
-            <img className='waveTopSkills' src={waveTopSkills} alt="React" loading='lazy' />
+            <img className='waveTopSkills' src={waveTopSkills} alt="Waves" loading='lazy' />
 
             <div className='skillsContainer'>
 
@@ -41,7 +41,7 @@ const Skills = () => {
 
             </div>
 
-            <img className='waveBottomSkills' src={waveBottomSkills} alt="React" loading='lazy' />
+            <img className='waveBottomSkills' src={waveBottomSkills} alt="Waves" loading='lazy' />
 
         </div>
     )

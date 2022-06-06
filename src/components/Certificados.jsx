@@ -3,6 +3,7 @@ import React from 'react'
 import udemy from '../assets/imgs/udemy.png'
 import coderhouse from '../assets/imgs/coderhouse.png'
 import CertificadosCard from './CertificadosCard'
+import waveBottomSkills from '../assets/waves/waveBottomSkills.png'
 
 const certificados = [
   {
@@ -29,16 +30,22 @@ const certificados = [
 
 const Certificados = () => {
   return (
-    <div>
-      <div>
-        <h2>Certifacados FIJATE LOS LINKS</h2>
+    <div className='certificadosBg' id='certificados'>
+      <div className='certificadosTitle'>
+        <h2>Certificados</h2>
+      </div>
         
-        <div>
+        <div className='certificadoContainer my-3'>
           {certificados.map(certificado => <CertificadosCard source={certificado.source} titulo={certificado.titulo} lugar={certificado.lugar} link={certificado.link}/>)}  
         </div>
 
-        <button>Mas certificados</button>
-      </div>
+        <div className='certificadosButtonContainer'>
+          <a className='certificadosButton' href='#' target='_blanck'>
+            Mas certificados
+          </a>
+        </div>
+      
+      <img className='waveBottomCertificado' src={waveBottomSkills} alt="Waves" loading='lazy' id='contacto' />
     </div>
   )
 }

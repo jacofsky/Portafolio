@@ -1,10 +1,17 @@
 // $small: 300px;
 $medium: 1400px;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
 
 * {
     font-family: 'Lato', sans-serif;
-
+    box-sizing: border-box;
+    
 }
+
 
 .inicioContainer {
     width: 100vw;
@@ -101,8 +108,9 @@ $medium: 1400px;
 .navbar {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(4px);
-
+    height: 5vh;
     .nav-link {
+        
         font-family: 'Lato';
         font-style: normal;
         font-weight: 700;
@@ -114,21 +122,22 @@ $medium: 1400px;
 }
 
 .waveTopSkills {
-    width: 100vw;
+    width: 100%;
     height: 13vh;
     position: absolute;
     z-index: -100;
 }
 
 .waveBottomSkills {
-    width: 100vw;
+    width: 100%;
     height: 13vh;
     position: relative;
     bottom: -5px;
+
 }
 
 .skillsContainer {
-
+    
     margin: 0 15vw;
 
     .skillTittle {
@@ -188,6 +197,8 @@ $medium: 1400px;
     background-color: #0ACF83;
     position: relative;
     z-index: 10;
+    width: 100%;
+   
     
     .portafolioContainer {
         margin: 0 15vw;
@@ -204,7 +215,7 @@ $medium: 1400px;
                 font-size: 4rem;
                 line-height: 5rem;
                 position: relative;
-                margin-top: 1rem;
+                margin-top: 2.5rem;
                 margin-bottom: 3rem;
     
     
@@ -220,143 +231,447 @@ $medium: 1400px;
             }
 
         }
+        
+        .portafolioButtonContainer {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1rem;
+
+            .portafolioButton {
+                display: inline-block;
+                text-align: center;
+                background: #FFFFFF;
+                border-radius: 50px;
+                color: #0ACF83;
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 43px;
+                padding: .5rem 2rem;
+                position: relative;
+                border: solid 2px transparent;
+                transform-style: preserve-3d;
+                border: 2px solid #000000;
+
+                transition: .2s all;
+                
+            }
+            
+            .portafolioButton::before {
+                content: 'Mas proyectos';
+                color: transparent;
+                border: 2px solid #000000;
+                padding: 1.75rem 2rem;
+                border-radius: 50px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                transform: translate3d(-.5rem, .5rem, -1rem);
+                transition: .2s all;
+                
+
+            }
+
+            .portafolioButton:active {
+                transform: translate(-.5rem, .55rem);
+                
+            }
+
+            .portafolioButton:active:before {
+                transform: translate3d(-.0, 0, -1rem);
+            }
+            
+
+        }
 
         .portafolioCard {
             
             display: flex;
             justify-content: center;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 17.875rem;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 10;
-            .proyectoContainer {
-                opacity: 0;
-                padding: 0;
-                position: absolute;
-                z-index: 10;
-                bottom: 7px;
-                width: 100%;
-                padding: 0 4.8vw;
-                transition: all .5s;
-                .infoProyecto {
+            padding: 0 0;
+            margin-bottom: 1.5rem;
 
-                    border-radius: 0 0 3.125rem 3.125rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background-color: rgba(0, 0, 0, 0.184);
-                    padding: .5rem 1rem;
+            a {
+                img {
+                    transition: all .3s;
+                }
+                &:hover {
+                    
+                    img {
+                        opacity: .8;
+                    }
+                }
+            }
+           
+        }
+
+    }
+
+    .waveBottomPortafolio {
+        position: relative;
+        width: 100vw;
+        height: 10vh;
+        bottom: -60px;
+        
+    }
+
+
+}
+
+.certificadosBg {
+    margin-top: 5rem;
+    width: 100vw;
+    position: relative;
+    padding-bottom: 20rem;
+    
+    .certificadosTitle {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0 0rem 0;
+        h2 {
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 5rem;
+            position: relative;
+            margin-top: 1rem;
+            text-align: center;
+    
+    
+            &::before {
+                content: 'Certificados';
+                position: absolute;
+                color: #ffffff;
+                left: -3px;
+                top: 4px;
+                z-index: -10;
+                font-style: normal;
+
+                font-weight: 700;
+                font-size: 4rem;
+                line-height: 5rem;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+        }
+    }
+
+    .waveBottomCertificado {
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        height: 5rem;
+    }
+
+    .certificadoContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 45vw;
+        margin: 1rem auto;
+        
+        .certificado {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 50px;
+            margin: 15px 0;
+            padding: 18px 16px;
+            .certifcadoInfo {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                
+                img {
+                    height: 8rem;
+                }
+
+                div {
+                    padding-left: 1rem;
 
                     h3 {
+                        font-family: 'Lato';
+                        font-style: normal;
                         font-weight: 700;
-                        opacity: 1;
-                        transition: all .5s;
-                        color: white;
-
+                        font-size: 36px;
+                        line-height: 58px;
+                        color: #000000;
+                        margin: 0;
                     }
 
-                    .tags {
-                        display: flex;
-                        opacity: 1;
-                        transition: all .5s;
-                        padding: 0 1rem;
+                    p {
+                        font-family: 'Lato';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 26px;
+                        line-height: 35px;
+                        color: #B7B7B7;
 
-                        div {
-                            border-radius: .5rem;
-                            margin: 0 .3rem;
-                        }
-
-                        p {
-                            margin: 0;
-                            padding: 0 .3rem;
-                            font-weight: 700;
-                            color: white;
-                        }
-
-                    }
-
-                    .linksPortafolio {
-                        a {
-                            background-color: #0ACF83;
-                            padding: 0 .5rem;
-                            margin: 0 .3rem;
-                            font-weight: 700;
-                            border-radius: .5rem;
-                            color: white;
-                            text-decoration: none;
-                            transition: all .5s;
-                            &:hover {
-                                background-color: #08a569;
-                            }
-                        }
                     }
 
                 }
+
             }
 
-            &:hover {                    
-                    .proyectoContainer {
-                        opacity: 1; 
-                        
+            .certificadoLink {
+                
+                a {
 
-                        padding: 0;
-                        position: absolute;
-                        bottom: 7px;
-                        width: 100%;
-                        padding: 0 4.8vw;
-
-                        .infoProyecto {
-                            opacity: 1;
-                            border-radius: 0 0 3.125rem 3.125rem;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            background-color: rgba(0, 0, 0, 0.184);
-                            padding: .5rem 1rem;
-
-                            h3 {
-                                font-weight: 700;
-                                opacity: 1;
-                                transition: all .5s;
-
-
-                            }
-
-                            .tags {
-                                display: flex;
-                                opacity: 1;
-                                transition: all .5s;
-                                padding: 0 1rem;
-
-                                div {
-                                    border-radius: .5rem;
-                                    margin: 0 .3rem;
-                                }
-
-                                p {
-                                    margin: 0;
-                                    padding: 0 .3rem;
-                                    font-weight: 700;
-                                    color: white;
-                                }
-
-                            }
-
-                            .linksPortafolio {
-                                a {
-                                    padding: 0 .5rem;
-                                }
-                            }
-
-                        }
+                    svg {
+                        transition: all .3s;
                     }
 
-                
-            }
+                    &:hover {
+    
+                        svg {
+                            stroke: #099b63;
+    
+                        }
+                    }
+                }
 
+            
+            }
+        }
+    }
+
+    .certificadosButtonContainer {
+        display: flex;
+        justify-content: center;
+        padding-top: 4rem;
+
+        .certificadosButton {
+            display: inline-block;
+            text-align: center;
+            background: #FFFFFF;
+            border-radius: 50px;
+            color: #0ACF83;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 43px;
+            padding: .5rem 2rem;
+            position: relative;
+            border: solid 2px transparent;
+            transform-style: preserve-3d;
+            border: 2px solid #000000;
+
+            transition: .2s all;
+            
+        }
+        
+        .certificadosButton::before {
+            content: 'Mas certificados';
+            color: transparent;
+            border: 2px solid #000000;
+            padding: 1.75rem 2rem;
+            border-radius: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: translate3d(-.5rem, .5rem, -1rem);
+            transition: .2s all;
+            
+
+        }
+
+        .certificadosButton:active {
+            transform: translate(-.5rem, .55rem);
+            
+        }
+
+        .certificadosButton:active:before {
+            transform: translate3d(-.0, 0, -1rem);
+        }
+
+    }
+}
+
+.contactoBg { 
+    background-color: #0ACF83;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+
+    .contactoTittle {
+        display: flex;
+        justify-content: center;
+        h2 {
+            display: inline-block;
+            color: white;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 5rem;
+            position: relative;
+            margin-bottom: 3rem;
+
+
+            &::before {
+                content: 'Contacto';
+                position: absolute;
+                color: #0acf83;
+                left: -3px;
+                top: 4px;
+                z-index: -1;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+        }
+
+    }
+
+    .contactoForm {
+        margin: 0 15vw;
+
+        .formDiv {
+            padding: 1rem;
+        }
+
+        .form-input {
+            border: 0 solid;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 35px;
+            padding: 1rem;
+        }
+
+        .form-input:focus {
+            outline: none;
+        }
+    }
+
+    .contactoButtonContainer {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+
+        .contactoButton {
+            display: inline-block;
+            text-align: center;
+            background: #FFFFFF;
+            border-radius: 50px;
+            color: #0ACF83;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 43px;
+            padding: .5rem 2rem;
+            position: relative;
+            border: solid 2px transparent;
+            transform-style: preserve-3d;
+            border: 2px solid #000000;
+
+            transition: .2s all;
+            
+        }
+        
+        .contactoButton::before {
+            content: 'Mas proyectos';
+            color: transparent;
+            border: 2px solid #000000;
+            padding: 1.75rem 2rem;
+            border-radius: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: translate3d(-.5rem, .5rem, -1rem);
+            transition: .2s all;
+            
+
+        }
+
+        .contactoButton:active {
+            transform: translate(-.5rem, .55rem);
+            
+        }
+
+        .contactoButton:active:before {
+            transform: translate3d(-.0, 0, -1rem);
+        }
+
+        .contactoButton:focus {
+            outline: none;
+        }
+    }
+
+    .divider {
+        display: flex;
+        justify-content: center;
+
+        p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 55px;
+            line-height: 80px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            color: #FFFFFF;                        
+        }
+
+        p::before {
+
+            content: '—o—';
+            position: absolute;
+            left: -3px;
+            top: 4px;
+            z-index: -1;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            color: #0ACF83;
+                                   
+        }
+    }
+
+    .redes {
+        margin: 0 10vw;
+        padding: 1rem 0;
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
+
+        .twitter {
+            transition: all .5s;
+        }
+
+        .twitter:hover {
+            fill: #1Da1F2;
+        }
+
+        .twitch {
+            transition: all .5s;
+        }
+
+        .twitch:hover {
+            fill: #6441a5;
+        }
+
+        .github {
+            transition: all .5s;
+        }
+
+        .github:hover {
+            fill: #333;
+        }
+
+        .linkedin {
+            transition: all .5s;
+        }
+
+        .linkedin:hover {
+            fill: #0a66c2;
         }
 
     }

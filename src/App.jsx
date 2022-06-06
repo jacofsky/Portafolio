@@ -7,7 +7,6 @@ import Skills from "./components/Skills"
 
 import './styles/index.scss'
 
-
 function App() {
 
   return (
