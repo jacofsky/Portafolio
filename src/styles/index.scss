@@ -1,15 +1,30 @@
-// $small: 300px;
+$small: 500px;
 $medium: 1400px;
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-
 }
 
 * {
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
+    scrollbar-width: none;
+    scrollbar-color: #0ACF83 #ffffff;
     
+}
+
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0ACF83;
+    border-radius: 16px;
+    border: 4px solid #ffffff;
 }
 
 
@@ -68,21 +83,24 @@ html {
                     margin-right: .5rem;
                 }
 
-                .linkedinInicio {
-                    cursor: pointer;
-                    transition: all .3s;
-
-                    &:hover {
-                        color: #0a66c2;
+                a {
+                    color: black;
+                    .linkedinInicio {
+                        cursor: pointer;
+                        transition: all .3s;
+    
+                        &:hover {
+                            color: #0a66c2;
+                        }
                     }
-                }
-
-                .githubInicio {
-                    cursor: pointer;
-                    transition: all .3s;
-
-                    &:hover {
-                        color: #333;
+    
+                    .githubInicio {
+                        cursor: pointer;
+                        transition: all .3s;
+    
+                        &:hover {
+                            color: #333;
+                        }
                     }
                 }
             }
@@ -123,7 +141,7 @@ html {
 
 .waveTopSkills {
     width: 100%;
-    height: 13vh;
+    height: 8rem;
     position: absolute;
     z-index: -100;
 }
@@ -674,5 +692,51 @@ html {
             fill: #0a66c2;
         }
 
+    }
+}
+
+.navbar-toggler {
+    border: #0ACF83 2px solid;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+@media screen and (max-width: $medium) {
+    .portafolioCard {
+        a {
+            img {
+                width: 30rem;
+            }
+        }
+    }
+    nav {
+        height: auto !important;
+    }
+}
+
+
+@media screen and (max-width: $small) {
+    .portafolioCard {
+        a {
+            img {
+                width: 20rem;
+            }
+        }
+    }
+
+    .imageInicio {
+
+        img {
+            width: 15rem !important;
+            height: 15rem !important;
+
+
+        }
+    }
+
+    .certificadosBg .certificadoContainer {
+        width: 55vw;
     }
 }

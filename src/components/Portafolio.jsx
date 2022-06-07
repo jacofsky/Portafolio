@@ -42,19 +42,19 @@ const proyectos = [
 
 const Portafolio = () => {
   return (
-    <div className='portafolioBg' id='portafolio' >
-        <div className='portafolioContainer'>
+    <div className='portafolioBg' id='portafolio'>
+        <div className='portafolioContainer' >
             <div className="portafolioTittle">
                 <h2>Portafolio</h2>
 
             </div>
             
-            <div className='row'>
+            <div className='row' >
                 {proyectos.map(proyecto => <ProyectoCard  source={proyecto.img} titulo={proyecto.titulo} tags={proyecto.tags} link={proyecto.link} />)}
             </div>
 
-            <div className='portafolioButtonContainer'>
-                <a className='portafolioButton' href='#' target='_blanck'>
+            <div className='portafolioButtonContainer' >
+                <a className='portafolioButton' href='https://github.com/jacofsky' target="_blank">
                     Mas proyectos
                 </a>
             </div>

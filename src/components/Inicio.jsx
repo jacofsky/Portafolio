@@ -3,6 +3,7 @@ import React from 'react'
 
 import foto from '../assets/imgs/valentinJacofsky.png'
 
+
 const Inicio = () => {
   return (
     <div className='inicioContainer' id='inicio'>
@@ -17,8 +18,12 @@ const Inicio = () => {
                 </h1>
                 
                 <div className='socialInicio d-flex justify-content-center justify-content-lg-start'>
-                  <LinkedinBoxFill className='linkedinInicio' size={54} />
-                  <GithubFill className='githubInicio' size={54}/>
+                  <a href="https://www.linkedin.com/in/valentin-jacofsky-127b9b210/" target="_blank" rel="noopener noreferrer">
+                    <LinkedinBoxFill className='linkedinInicio' size={54} />
+                  </a>
+                  <a href="https://github.com/jacofsky" target="_blank" rel="noopener noreferrer">
+                    <GithubFill className='githubInicio' size={54}/>
+                  </a>
                 </div>
 
             </div>

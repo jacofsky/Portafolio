@@ -10,21 +10,21 @@ const certificados = [
     source: coderhouse,
     titulo: 'Diseño web',
     lugar: 'Coderhouse',
-    link: 'https://www.google.com'
+    link: 'https://www.coderhouse.com/certificados/61128db8bab9b000101aaf5e'
 
   },
   {
     source: coderhouse,
     titulo: 'JavaScript',
     lugar: 'Coderhouse',
-    link: 'https://www.google.com'
+    link: 'https://www.coderhouse.com/certificados/61521d02146a3800173332d2'
 
   },
   {
     source: udemy,
     titulo: 'React',
     lugar: 'Udemy',
-    link: 'https://www.google.com'
+    link: 'https://www.udemy.com/certificate/UC-ecf24eb5-ed47-4ff0-bb06-5d92f50eb609/'
   }
 ]
 
@@ -40,7 +40,7 @@ const Certificados = () => {
         </div>
 
         <div className='certificadosButtonContainer'>
-          <a className='certificadosButton' href='#' target='_blanck'>
+          <a className='certificadosButton' href='https://www.linkedin.com/in/valentin-jacofsky-127b9b210/' target="_blank">
             Mas certificados
           </a>
         </div>

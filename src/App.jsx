@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar"
 import Portafolio from "./components/Portafolio"
 import Skills from "./components/Skills"
 
+
+
 import './styles/index.scss'
 
 function App() {
